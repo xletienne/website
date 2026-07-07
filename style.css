@@ -1,0 +1,137 @@
+/* Xiaoli Etienne — shared stylesheet */
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap');
+
+:root{
+  --ink:#20211d;
+  --soft:#45463f;
+  --muted:#71726a;
+  --accent:#8a6a08;          /* old gold — dark enough to read as text */
+  --accent-soft:#a8871c;
+  --gold:#EAAA00;            /* Vandal Gold, decorative accents only */
+  --rule:#ddDCD2;
+  --rule-soft:#e8e7df;
+  --bg:#fbfaf6;              /* warm paper */
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:var(--serif);
+  font-size:17.5px;line-height:1.68;
+  -webkit-font-smoothing:antialiased;
+}
+.page{max-width:860px;margin:0 auto;padding:2.6rem 1.5rem 4rem}
+
+a{color:var(--accent);text-decoration:none;transition:color .15s}
+a:hover,a:focus-visible{color:var(--accent-soft);text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1px}
+a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ---------- masthead ---------- */
+.masthead .name{
+  font-size:1.65rem;margin:0;letter-spacing:.01em;font-weight:600;
+}
+.masthead .name a{color:var(--ink)}
+.masthead .name a:hover{color:var(--accent);text-decoration:none}
+.masthead .tag{color:var(--muted);font-size:14.5px;margin:.3rem 0 0;letter-spacing:.01em}
+
+nav.top{
+  margin:1.2rem 0 0;padding:.75rem 0;
+  border-top:2px solid var(--ink);
+  border-bottom:1px solid var(--rule);
+  font-size:14px;
+  font-variant:small-caps;letter-spacing:.09em;
+}
+nav.top a{margin-right:1.5rem;white-space:nowrap;color:var(--soft)}
+nav.top a:hover{color:var(--accent);text-decoration:none}
+nav.top a[aria-current="page"]{color:var(--accent);font-weight:600}
+
+nav.sub{margin:1.1rem 0 0;font-size:14.5px;color:var(--muted)}
+nav.sub a{margin-right:1.1rem;white-space:nowrap}
+nav.sub a[aria-current="page"]{color:var(--ink);font-weight:600}
+
+/* ---------- headings ---------- */
+h1.pagetitle{
+  font-size:1.85rem;font-weight:600;margin:2.1rem 0 1.1rem;letter-spacing:-.005em;
+}
+h2{
+  font-size:1.05rem;font-weight:600;
+  font-variant:small-caps;letter-spacing:.1em;color:var(--ink);
+  margin:2.7rem 0 1rem;padding-bottom:.4rem;
+  border-bottom:1px solid var(--rule);
+  position:relative;
+}
+h2::after{
+  content:"";position:absolute;left:0;bottom:-1px;
+  width:44px;height:3px;background:var(--gold);
+}
+h3{font-size:1.05rem;font-weight:600;margin:1.6rem 0 .5rem}
+p{margin:0 0 1rem}
+ul{margin:0 0 1rem;padding-left:1.25rem}
+li{margin-bottom:.6rem}
+li::marker{color:var(--accent-soft)}
+
+/* ---------- home header w/ photo ---------- */
+.head{display:flex;gap:2rem;align-items:flex-start;flex-wrap:wrap;margin-top:2rem}
+.head-text{flex:1;min-width:260px}
+.head h1{font-size:2.15rem;font-weight:600;margin:0 0 .35rem;letter-spacing:-.01em}
+.title-line{color:var(--soft);margin:0 0 .2rem}
+.dept-line{color:var(--muted);font-size:15.5px;margin:0}
+.portrait{width:158px}
+.portrait img{
+  width:158px;height:198px;object-fit:cover;display:block;
+  border:1px solid var(--rule);
+  box-shadow:4px 4px 0 var(--rule-soft);
+}
+.contact-line{margin:1rem 0 0;font-size:15px;color:var(--soft)}
+.sep{color:var(--rule);padding:0 .5em}
+
+/* ---------- publications ---------- */
+ol.pubs{margin:0;padding-left:2rem}
+ol.pubs li{margin-bottom:.9rem;padding-left:.3rem}
+ol.pubs li::marker{color:var(--muted);font-size:15px}
+.venue{font-style:italic}
+.note{
+  font-size:14.5px;color:var(--muted);
+  border-left:2px solid var(--rule);padding-left:.9rem;
+  margin-bottom:1.6rem;line-height:1.6;
+}
+.me{font-weight:600}
+
+/* ---------- rows (courses etc.) ---------- */
+.row{margin-bottom:.95rem}
+.row b{font-weight:600}
+.row .sub{display:block;color:var(--muted);font-size:14.5px;margin-top:.1rem}
+
+/* ---------- news ---------- */
+.news-item{margin-bottom:1.15rem;display:grid;grid-template-columns:96px 1fr;gap:1.1rem}
+.news-item .date{
+  color:var(--accent);font-size:13px;white-space:nowrap;padding-top:3px;
+  font-variant:small-caps;letter-spacing:.06em;
+}
+
+/* ---------- students ---------- */
+.student{margin-bottom:1.05rem;padding-left:.9rem;border-left:2px solid var(--rule-soft)}
+.student b{font-weight:600}
+.student .sub{display:block;color:var(--muted);font-size:14.5px;margin-top:.1rem}
+
+footer{
+  margin-top:3.6rem;padding-top:1.1rem;border-top:1px solid var(--rule);
+  font-size:14px;color:var(--muted);
+  display:flex;justify-content:space-between;flex-wrap:wrap;gap:.5rem;
+}
+footer a{color:var(--muted)}
+footer a:hover{color:var(--accent)}
+
+@media (max-width:600px){
+  .portrait{width:124px}
+  .portrait img{width:124px;height:155px}
+  .news-item{grid-template-columns:1fr;gap:.15rem}
+  nav.top{overflow-x:auto;white-space:nowrap;scrollbar-width:none}
+  nav.top::-webkit-scrollbar{display:none}
+}
+@media print{
+  nav.top,nav.sub,footer{display:none}
+  body{background:#fff;font-size:12pt}
+  a{color:var(--ink)}
+}
