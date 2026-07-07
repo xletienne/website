@@ -1,13 +1,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Home — Xiaoli Etienne</title>
-<meta name="description" content="Xiaoli Etienne, Professor and Idaho Wheat Commission Bill Flory Endowed Chair in Risk Management, University of Idaho.">
+<meta name="description" content="Xiaoli Etienne, Professor of Applied Economics and Idaho Wheat Commission Bill Flory Endowed Chair in Risk Management, University of Idaho.">
 <link rel="stylesheet" href="style.css">
 
 <div class="page">
 <div class="masthead">
   <p class="name"><a href="index.html">Xiaoli Etienne</a></p>
-  <p class="tag">Professor and Idaho Wheat Commission Bill Flory Endowed Chair in Risk Management, University of Idaho</p>
+  <p class="tag">Professor of Applied Economics and Idaho Wheat Commission Bill Flory Endowed Chair in Risk Management, University of Idaho</p>
 </div>
 <nav class="top">
   <a href="index.html" aria-current="page">Home</a>
@@ -22,10 +22,10 @@
 <div class="head">
   <div class="head-text">
     <h1>Xiaoli Etienne</h1>
-    <p class="title-line">Professor and Idaho Wheat Commission Bill Flory Endowed Chair in Risk Management</p>
+    <p class="title-line">Professor of Applied Economics and Idaho Wheat Commission Bill Flory Endowed Chair in Risk Management</p>
     <p class="dept-line">Department of Agricultural Economics and Rural Sociology, University of Idaho</p>
     <p class="contact-line">
-      <a href="mailto:xetienne@uidaho.edu">xetienne@uidaho.edu</a><span class="sep">&middot;</span>
+     <a href="#" id="em">email: xetienne at uidaho dot edu</a><span class="sep">&middot;</span>
       +1 208 885 0133<span class="sep">&middot;</span>
       Ag Science Room 25, Moscow, ID 83844
     </p>
@@ -69,4 +69,12 @@
   <span><a href="#">Back to top</a></span>
 </footer>
 </div>
+<script>
+(function(){
+  var u = "xetienne", d = "uidaho.edu";
+  var a = document.getElementById("em");
+  a.href = "mailto:" + u + "@" + d;
+  a.textContent = u + "@" + d;
+})();
+</script>
 <script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
